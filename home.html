@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <!-- Get minified jquery core from https://code.jquery.com/ for dropdowns, must be placed before JavaScipt -->
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <title>LATITUDINOUS.</title>
+
+  <!-- link to grids -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- <link rel="stylesheet" href="reset.css"> -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="./home.html"><i class="glyphicon glyphicon-home"></i> &ensp;<b>LATITUDINOUS.</b></a>
+      </div>
+  
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="./temp.html"><i class="glyphicon glyphicon-fire"></i> &ensp;Max. Temp</a></li>
+              <li><a href="./adjtemp.html"><i class="glyphicon glyphicon-fire"></i> &ensp;Adj. Temp</a></li>
+              <li><a href="./cloudiness.html"><i class="glyphicon glyphicon-cloud"></i> &ensp;Cloudiness</a></li>
+              <li><a href="./humidity.html"><i class="glyphicon glyphicon-tint"></i> &ensp;Humidity</a></li>
+              <li><a href="./windspeed.html"><i class="glyphicon glyphicon-leaf"></i> &ensp;Windspeed</a></li>
+            </ul>
+          </li> 
+          <li><a href="./comparison.html">Comparison</a></li>
+          <li><a href="./data.html">Data</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <main class="summ_container">
+            <header>
+              <h3>PROJECT SUMMARY</h3>
+              <hr>
+              <br>
+            </header>
+
+            <section id="summary">
+              <section>
+                <img id="img" src="C:\Users\WOODS4\Documents\GitHub\WebViz_homework\Resources\assets\images\MaxTempHeatmap.png" alt="main-viz">
+              </section>
+              <br>
+              <p>The purpose of this project was to investigate the relationship between latitude and various weather measurements, such as temperature, cloudiness, wind speed, and humidity. To accomplish this, I used Python and the OpenWeatherMap API to assemble a dataset of over 21,000 cities from around the globe.</p>
+              <p>Matplotlib and Tableau were used to visualize the data and search for potential correlations. This site provides the source data and visualizations that were generated throughout the analysis, as well as my own opinions as to possible explanations for obeserved trends and correlations.</p>
+            </section>
+        </main>
+      </div>
+
+      <div class="col-md-6">
+        <main class="viz_container">
+          <header>
+            <h3>VISUALIZATIONS</h3>
+            <hr>
+            <br>
+          </header>
+
+          <section>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-6">
+                  <section>
+                      <a href="C:\Users\WOODS4\Documents\GitHub\WebViz_homework\Resources\assets\images\LatvsTemp.png" target="_blank">
+                          <img id="img" src="C:\Users\WOODS4\Documents\GitHub\WebViz_homework\Resources\assets\images\LatvsTemp.png"  alt="latvstemp">
+                      </a>
+                  </section>
+                </div>
+
+                <div class="col-md-6">
+                  <section>
+                      <a href="C:\Users\WOODS4\Documents\GitHub\WebViz_homework\Resources\assets\images\LatvsAdjTemp.png" target="_blank">
+                        <img id="img" src="C:\Users\WOODS4\Documents\GitHub\WebViz_homework\Resources\assets\images\LatvsAdjTemp.png" alt="latvsadjtemp">
+                      </a>
+                  </section>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <section>
+                      <a href="C:\Users\WOODS4\Documents\GitHub\WebViz_homework\Resources\assets\images\LatvsHum.png" target="_blank">
+                        <img id="img" src="C:\Users\WOODS4\Documents\GitHub\WebViz_homework\Resources\assets\images\LatvsHum.png" alt="latvshum">
+                      </a>
+                  </section>
+                </div>
+
+                <div class="col-md-6">
+                  <section>
+                      <a href="C:\Users\WOODS4\Documents\GitHub\WebViz_homework\Resources\assets\images\LatvsWind.png" target="_blank">
+                        <img id="img" src="C:\Users\WOODS4\Documents\GitHub\WebViz_homework\Resources\assets\images\LatvsWind.png" alt="latvswind">
+                      </a>
+                  </section>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <section>
+                      <a href="C:\Users\WOODS4\Documents\GitHub\WebViz_homework\Resources\assets\images\LatvsCloud.png" target="_blank">
+                        <img id="img" src="C:\Users\WOODS4\Documents\GitHub\WebViz_homework\Resources\assets\images\LatvsCloud.png" alt="latvscloud">
+                      </a>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
