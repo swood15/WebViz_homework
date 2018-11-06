@@ -3,6 +3,7 @@
   
 <head>
     <meta charset="UTF-8">
+    <title>Latitude vs Temp</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -17,7 +18,9 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <title>Document</title>
+
+    <script src="image_comp.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -53,6 +56,20 @@
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
+
+    <div class="img-comp-container">
+      <div class="img-comp-img">
+        <img src="./Resources/assets/images/LatvsTemp.png" width="1200" height="800">
+      </div>
+      <div class="img-comp-img img-comp-overlay">
+        <img src="./Resources/assets/images/LatvsAdjTemp.png" width="1200" height="800">
+      </div>
+    </div>
+    
+    <script>
+    /*Execute a function that will execute an image compare function for each element with the img-comp-overlay class:*/
+    initComparisons();
+    </script>
 </body>
 
 </html>
