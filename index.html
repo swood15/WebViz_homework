@@ -46,8 +46,7 @@
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="./temp.html"><i class="glyphicon glyphicon-fire"></i> &ensp;Max. Temp</a></li>
-              <li><a href="./adjtemp.html"><i class="glyphicon glyphicon-fire"></i> &ensp;Adj. Temp</a></li>
+              <li><a href="./temp.html"><i class="glyphicon glyphicon-fire"></i> &ensp;Temperature</a></li>
               <li><a href="./cloudiness.html"><i class="glyphicon glyphicon-cloud"></i> &ensp;Cloudiness</a></li>
               <li><a href="./humidity.html"><i class="glyphicon glyphicon-tint"></i> &ensp;Humidity</a></li>
               <li><a href="./windspeed.html"><i class="glyphicon glyphicon-leaf"></i> &ensp;Windspeed</a></li>
@@ -62,7 +61,7 @@
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-8">
         <main class="summ_container">
           <header>
             <h3>PROJECT SUMMARY</h3>
@@ -71,17 +70,19 @@
           </header>
 
           <section id="summary">
-            <section> 
-              <img id="img" src="./Resources/assets/images/MaxTempHeatmap.png" alt="main-viz">
-            </section>
-            <br>
             <p>The purpose of this project was to investigate the relationship between latitude and various weather measurements, such as temperature, cloudiness, wind speed, and humidity. To accomplish this, I used Python and the OpenWeatherMap API to assemble a dataset of over 21,000 cities from around the globe.</p>
             <p>Matplotlib and Tableau were used to visualize the data and search for potential correlations. This site provides the source data and visualizations that were generated throughout the analysis, as well as my own opinions as to possible explanations for obeserved trends and correlations.</p>
+            <br>
+            <section> 
+              <a href="./Resources/assets/images/MaxTempHeatmap.png" target="_blank">
+                <img id="img" src="./Resources/assets/images/MaxTempHeatmap.png" alt="main-viz">
+              </a>
+            </section>
           </section>
         </main>
       </div>
 
-      <div class="col-md-6">
+      <div class="col-md-4">
         <main class="viz_container">
           <header>
             <h3>VISUALIZATIONS</h3>
@@ -94,16 +95,16 @@
               <div class="row">
                 <div class="col-md-6">
                   <section>
-                    <a href="C:\Users\WOODS4\Documents\GitHub\WebViz_homework\Resources\assets\images\LatvsTemp.png" target="_blank">
-                      <img id="img" src="C:\Users\WOODS4\Documents\GitHub\WebViz_homework\Resources\assets\images\LatvsTemp.png"  alt="latvstemp">
+                    <a href="./temp.html">
+                      <img id="img" src="C:\Users\WOODS4\Documents\GitHub\WebViz_homework\Resources\assets\images\LatvsTemp.png" alt="latvstemp">
                     </a>
                   </section>
                 </div>
 
                 <div class="col-md-6">
                   <section>
-                    <a href="C:\Users\WOODS4\Documents\GitHub\WebViz_homework\Resources\assets\images\LatvsAdjTemp.png" target="_blank">
-                      <img id="img" src="C:\Users\WOODS4\Documents\GitHub\WebViz_homework\Resources\assets\images\LatvsAdjTemp.png" alt="latvsadjtemp">
+                    <a href="./cloudiness.html">
+                      <img id="img" src="C:\Users\WOODS4\Documents\GitHub\WebViz_homework\Resources\assets\images\LatvsCloud.png" alt="latvscloud">
                     </a>
                   </section>
                 </div>
@@ -112,7 +113,7 @@
               <div class="row">
                 <div class="col-md-6">
                   <section>
-                    <a href="C:\Users\WOODS4\Documents\GitHub\WebViz_homework\Resources\assets\images\LatvsHum.png" target="_blank">
+                    <a href="./humidity.html">
                       <img id="img" src="C:\Users\WOODS4\Documents\GitHub\WebViz_homework\Resources\assets\images\LatvsHum.png" alt="latvshum">
                     </a>
                   </section>
@@ -120,18 +121,8 @@
 
                 <div class="col-md-6">
                   <section>
-                    <a href="C:\Users\WOODS4\Documents\GitHub\WebViz_homework\Resources\assets\images\LatvsWind.png" target="_blank">
+                    <a href="./windspeed.html">
                       <img id="img" src="C:\Users\WOODS4\Documents\GitHub\WebViz_homework\Resources\assets\images\LatvsWind.png" alt="latvswind">
-                    </a>
-                  </section>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-md-6">
-                  <section>
-                    <a href="C:\Users\WOODS4\Documents\GitHub\WebViz_homework\Resources\assets\images\LatvsCloud.png" target="_blank">
-                      <img id="img" src="C:\Users\WOODS4\Documents\GitHub\WebViz_homework\Resources\assets\images\LatvsCloud.png" alt="latvscloud">
                     </a>
                   </section>
                 </div>

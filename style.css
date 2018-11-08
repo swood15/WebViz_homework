@@ -34,13 +34,15 @@ header {
 /* Selecting elements by class */
 .summ_container {
   /* width: 720px; */
-  margin-left: 20px;
+  margin-left: 10%;
+  margin-right: 5%;
   float: left;
   text-align: center;
 }
 
 .viz_container {
-  margin-right: 20px;
+  margin-left: 5%;
+  margin-right: 20%;
   float: right;
   text-align: center;
 }
@@ -49,6 +51,12 @@ header {
   margin-left: 10%;
   margin-right: 10%;
   text-align: left;
+}
+
+.comp_container {
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
 }
 
 /* Selecting elements by ID */
@@ -131,33 +139,38 @@ header {
   margin-left: 100px;
 } */
 
-* {box-sizing: border-box;}
+/* CSS FOR IMAGE COMP SLIDER */
 
-.img-comp-container {
+/* * {box-sizing: border-box;} */
+
+/* .img-comp-container {
   position: relative;
-  height: 800px; /*should be the same height as the images*/
-}
+  width: auto;
+  height: auto;
+  /* height: 800px; should be the same height as the images */
+} */
 
-.img-comp-img {
+/* .img-comp-img {
   position: absolute;
   width: auto;
   height: auto;
   overflow:hidden;
-}
+} */
 
-.img-comp-img img {
-  /* display: block; */
-  vertical-align: middle;
-}
+/* .img-comp-img img {
+  display: block;
+  width: auto;
+  height: auto;
+} */
 
-.img-comp-slider {
+/* .img-comp-slider {
   position: absolute;
   z-index:9;
-  cursor: ew-resize;
+  cursor: ew-resize; */
   /*set the appearance of the slider:*/
-  width: 20px;
+  /* width: 20px;
   height: 80px;
   background-color: #2196F3;
   opacity: 0.7;
   border-radius: 10%;
-}
+} */

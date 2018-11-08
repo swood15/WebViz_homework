@@ -34,7 +34,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="./index.html"><i class="glyphicon glyphicon-home"></i> &ensp;<b>LATITUDINOUS.</b></a>
+        <a class="navbar-brand" href="./home.html"><i class="glyphicon glyphicon-home"></i> &ensp;<b>LATITUDINOUS.</b></a>
       </div>
   
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -67,19 +67,21 @@
           </header>
 
           <section id="summary">
-            <p>As expected, there appears to be a significant relationship between latitude and temperature. Specifically, as one approaches the equator (latitude = 0) the temperature becomes warmer. Also of note is the fact that the southern hemisphere generally appears warmer than the northern hemisphere at the time the data were collected. This is likely due to the tilt of the Earth's axis. Fitting a second degree polynomial to the data gives a P value less than 0.0001 and R squared of ~55%. This indicates that while the correlation is indeed statistically significant, latitude by itself only accounts for just over half of the variation in temperature.</p>
-            <br>
-            <section> 
-              <a href="./Resources/assets/images/LatvsTemp.png" target="_blank">
-                <img id="img" src="./Resources/assets/images/LatvsTemp.png" alt="main-viz">
-              </a>
-            </section>
-            <p>One particular variable that could be influencing temperature is elevation. By normalizing temperatures with respect to the elevation of each city we can eliminate some of this variation and enhance the predictive capabilities of our model. The same coordinates that were used to obtain temperature data from the OpenWeatherMap API were passed to the Google Elevation API to obtain each city's elevation. The data were then normalized using a simple but generally agreed-upon rule of thumb: temperature decreases by approximately 3.5 deg F for each 1,000 ft increase in elevation. Plotting the results, it is apparent that the variation in temperature given latitude has decreased significantly. In fact, the R squared value jumped from about 55% to over 66%.</p>
-            <section> 
-              <a href="./Resources/assets/images/LatvsAdjTemp.png" target="_blank">
-                <img id="img" src="./Resources/assets/images/LatvsAdjTemp.png" alt="main-viz">
-              </a>
-            </section>
+            <div class="container-fluid">
+              <div class="img-comp-container">
+                <div class="img-comp-img">
+                  <img src="./Resources/assets/images/LatvsTemp.png">
+                </div>
+                <div class="img-comp-img img-comp-overlay">
+                  <img src="./Resources/assets/images/LatvsAdjTemp.png">
+                </div>
+              </div>
+            </div>
+        
+            <script>
+            /*Execute a function that will execute an image compare function for each element with the img-comp-overlay class:*/
+            initComparisons();
+            </script>
           </section>
         </main>
       </div>  
