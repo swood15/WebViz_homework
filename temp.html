@@ -2,25 +2,29 @@
 <html lang="en">
   
 <head>
-    <meta charset="UTF-8">
-    <title>Latitude vs Temp</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <title>LATITUDINOUS.</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-    <!-- Get minified jquery core from https://code.jquery.com/ for dropdowns, must be placed before JavaScipt -->
-    <script
-    src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
+  <!-- Get minified jquery core from https://code.jquery.com/ for dropdowns, must be placed before JavaScipt -->
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-    <script src="image_comp.js"></script>
-    <link rel="stylesheet" href="style.css">
+  <!-- link to grids -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- <link rel="stylesheet" href="reset.css"> -->
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="alt_image_comp.js"></script>
 </head>
 
 <body>
@@ -61,25 +65,23 @@
       <div class="col-md-8">
         <main class="summ_container">
           <header>
-            <h3>LATITUDE x TEMPERATURE</h3>
+            <h3>LATITUDE VS TEMPERATURE</h3>
             <hr>
-            <br>
           </header>
 
           <section id="summary">
             <p>As expected, there appears to be a significant relationship between latitude and temperature. Specifically, as one approaches the equator (latitude = 0) the temperature becomes warmer. Also of note is the fact that the southern hemisphere generally appears warmer than the northern hemisphere at the time the data were collected. This is likely due to the tilt of the Earth's axis. Fitting a second degree polynomial to the data gives a P value less than 0.0001 and R squared of ~55%. This indicates that while the correlation is indeed statistically significant, latitude by itself only accounts for just over half of the variation in temperature.</p>
             <br>
             <section> 
-              <a href="./Resources/assets/images/LatvsTemp.png" target="_blank">
-                <img id="img" src="./Resources/assets/images/LatvsTemp.png" alt="main-viz">
-              </a>
+              <div class="ba-slider">
+                <img src="./Resources/assets/images/LatvsTemp.png" alt="">       
+                <div class="resize">
+                  <img src="./Resources/assets/images/LatvsAdjTemp.png" alt="">
+                </div>
+                <span class="handle"></span>
+              </div>
             </section>
             <p>One particular variable that could be influencing temperature is elevation. By normalizing temperatures with respect to the elevation of each city we can eliminate some of this variation and enhance the predictive capabilities of our model. The same coordinates that were used to obtain temperature data from the OpenWeatherMap API were passed to the Google Elevation API to obtain each city's elevation. The data were then normalized using a simple but generally agreed-upon rule of thumb: temperature decreases by approximately 3.5 deg F for each 1,000 ft increase in elevation. Plotting the results, it is apparent that the variation in temperature given latitude has decreased significantly. In fact, the R squared value jumped from about 55% to over 66%.</p>
-            <section> 
-              <a href="./Resources/assets/images/LatvsAdjTemp.png" target="_blank">
-                <img id="img" src="./Resources/assets/images/LatvsAdjTemp.png" alt="main-viz">
-              </a>
-            </section>
           </section>
         </main>
       </div>  

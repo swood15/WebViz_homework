@@ -24,6 +24,7 @@
 
   <!-- <link rel="stylesheet" href="reset.css"> -->
   <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="alt_image_comp.js"></script>
 </head>
 
 <body>
@@ -61,7 +62,7 @@
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-md-6">
         <main class="summ_container">
           <header>
             <h3>PROJECT SUMMARY</h3>
@@ -74,15 +75,20 @@
             <p>Matplotlib and Tableau were used to visualize the data and search for potential correlations. This site provides the source data and visualizations that were generated throughout the analysis, as well as my own opinions as to possible explanations for obeserved trends and correlations.</p>
             <br>
             <section> 
-              <a href="./Resources/assets/images/MaxTempHeatmap.png" target="_blank">
-                <img id="img" src="./Resources/assets/images/MaxTempHeatmap.png" alt="main-viz">
-              </a>
+              <div class="ba-slider">
+                <img src="./Resources/assets/images/MaxTempHeatmap.png" alt="">       
+                <div class="resize">
+                  <img src="./Resources/assets/images/AdjTempHeatmap.png" alt="">
+                </div>
+                <span class="handle"></span>
+              </div>
+              <h6>Drag the slider to the left to see a global heatmap of the raw temperature data for each city, or to the right to see tempeature data normalized to each city's elevation.</h6>
             </section>
           </section>
         </main>
       </div>
 
-      <div class="col-md-4">
+      <div class="col-md-6">
         <main class="viz_container">
           <header>
             <h3>VISUALIZATIONS</h3>
